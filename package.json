@@ -2,7 +2,7 @@
     "name": "hoon",
     "displayName": "Hoon",
     "description": "Language support for the Hoon language",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "publisher": "urbit",
     "repository": "https://github.com/famousj/hoon-vscode.git",
     "icon": "images/urbit.png",
@@ -13,16 +13,25 @@
         "Programming Languages"
     ],
     "contributes": {
-        "languages": [{
-            "id": "hoon",
-            "aliases": ["hoon", "hoon"],
-            "extensions": [".hoon"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "hoon",
-            "scopeName": "source.hoon",
-            "path": "./syntaxes/hoon.tmLanguage"
-        }]
+        "languages": [
+            {
+                "id": "hoon",
+                "aliases": [
+                    "hoon",
+                    "hoon"
+                ],
+                "extensions": [
+                    ".hoon"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "hoon",
+                "scopeName": "source.hoon",
+                "path": "./syntaxes/hoon.tmLanguage"
+            }
+        ]
     }
 }
