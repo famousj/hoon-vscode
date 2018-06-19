@@ -1,0 +1,26 @@
+{
+    "name": "hoon",
+    "displayName": "Hoon",
+    "description": "Language support for the Hoon language",
+    "version": "0.0.1",
+    "publisher": "famousj",
+    "engines": {
+        "vscode": "^1.24.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "hoon",
+            "aliases": ["hoon", "hoon"],
+            "extensions": [".hoon"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "hoon",
+            "scopeName": "source.hoon",
+            "path": "./syntaxes/hoon.tmLanguage"
+        }]
+    }
+}
