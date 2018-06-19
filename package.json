@@ -5,6 +5,7 @@
     "version": "0.0.1",
     "publisher": "urbit",
     "repository": "https://github.com/famousj/hoon-vscode.git",
+    "icon": "images/urbit.png",
     "engines": {
         "vscode": "^1.24.0"
     },
