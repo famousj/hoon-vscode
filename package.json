@@ -3,7 +3,7 @@
     "displayName": "Hoon",
     "description": "Language support for the Hoon language",
     "version": "0.0.1",
-    "publisher": "famousj",
+    "publisher": "urbit",
     "repository": "https://github.com/famousj/hoon-vscode.git",
     "engines": {
         "vscode": "^1.24.0"
