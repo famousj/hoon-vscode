@@ -7,10 +7,14 @@
     "repository": "https://github.com/famousj/hoon-vscode.git",
     "icon": "images/urbit.png",
     "engines": {
-        "vscode": "^1.24.0"
+        "vscode": "^1.33.0"
     },
     "categories": [
         "Programming Languages"
+    ],
+    "main": "./out/extension",
+    "activationEvents": [
+        "onLanguage:hoon"
     ],
     "contributes": {
         "languages": [
@@ -32,6 +36,45 @@
                 "scopeName": "source.hoon",
                 "path": "./syntaxes/hoon.tmLanguage"
             }
-        ]
+        ],
+        "configuration": {
+            "title": "Hoon",
+            "properties": {
+                "hoon.languageServer.enabled": {
+                    "type": "boolean",
+                    "default": false,
+                    "scope": "window",
+                    "description": "Enable Language Server"
+                },
+                "hoon.languageServer.port": {
+                    "type": "integer",
+                    "default": "8080",
+                    "scope": "window",
+                    "description": "Port of the Urbit HTTP server"
+                },
+                "hoon.languageServer.delay": {
+                    "type": "integer",
+                    "default": "500",
+                    "scope": "window",
+                    "description": "Time in ms to wait before sending save events"
+                }
+            }
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run update-vscode && npm run build",
+        "update-vscode": "vscode-install",
+        "postinstall": "vscode-install",
+        "build": "tsc",
+        "clean": "rm -rf out",
+        "watch": "tsc -w"
+    },
+    "dependencies": {
+        "hoon-language-server": "^0.1.0",
+        "vscode-languageclient": "^5.2.1"
+    },
+    "devDependencies": {
+        "@types/node": "^13.7.2",
+        "vscode": "^1.1.35"
     }
 }
