@@ -2,7 +2,7 @@
     "name": "hoon",
     "displayName": "Hoon",
     "description": "Language support for the Hoon language",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "publisher": "urbit",
     "repository": "https://github.com/famousj/hoon-vscode.git",
     "icon": "images/urbit.png",
@@ -27,6 +27,10 @@
                 "extensions": [
                     ".hoon"
                 ],
+                "icon": {
+                    "light": "./icons/tilde_light.png",
+                    "dark": "./icons/tilde_dark.png"
+                },
                 "configuration": "./language-configuration.json"
             }
         ],
