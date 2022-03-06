@@ -20,6 +20,8 @@ export function activate(context: ExtensionContext) {
 
   const port: number = configuration.get("port");
   const delay: number = configuration.get("delay");
+  const c: string = configuration.get("code");
+  const s: string = configuration.get("planet");
   const enabled: boolean = configuration.get("enabled");
   if (!enabled) {
     return;
@@ -27,7 +29,7 @@ export function activate(context: ExtensionContext) {
   // Server must be in $PATH
   let serverExecutable: Executable = {
     command: "hoon-language-server",
-    args: [`--port ${port}`, `--delay ${delay}`]
+    args: [`-p=${port}`, `-d=${delay}`, `-s=${s}`, `-c=${c}`]
   };
 
   // If the extension is launched in debug mode then the debug server options are used
